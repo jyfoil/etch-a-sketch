@@ -13,3 +13,7 @@
   height: 30px;
   width: 30px;
 }
+
+.row:hover {
+  background-color: black;
+}
