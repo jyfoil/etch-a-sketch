@@ -9,5 +9,3 @@ for (let i = 0; i < 256; i++) {
     row.style.backgroundColor = "black";
   });
 }
-
-console.log(grid);

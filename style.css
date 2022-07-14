@@ -1,19 +1,11 @@
-.container {
-  display: flex;
-  justify-content: center;
-}
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 578px;
+  display: grid;
+  grid-template-columns: repeat(16, 35px);
+  justify-content: center;
 }
 
 .row {
   border: solid black;
   height: 30px;
   width: 30px;
-}
-
-.row:hover {
-  background-color: black;
 }
