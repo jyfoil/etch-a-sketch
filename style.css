@@ -1,11 +1,9 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(16, 35px);
-  justify-content: center;
+  width: 600px;
+  height: 600px;
 }
 
 .row {
-  border: solid black;
-  height: 30px;
-  width: 30px;
+  border: 1px solid black;
 }

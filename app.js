@@ -1,11 +1,18 @@
 const grid = document.querySelector(".grid");
 
-for (let i = 0; i < 256; i++) {
-  const row = document.createElement("div");
-  row.classList.add("row");
-  grid.appendChild(row);
+function makeGrid(numOfRows) {
+  const total = numOfRows * numOfRows;
+  grid.style.gridTemplateColumns = `repeat(${numOfRows}, 1fr)`;
 
-  row.addEventListener("mouseover", () => {
-    row.style.backgroundColor = "black";
-  });
+  for (let i = 0; i < total; i++) {
+    const row = document.createElement("div");
+    row.classList.add("row");
+    grid.appendChild(row);
+
+    row.addEventListener("mouseover", () => {
+      row.style.backgroundColor = "black";
+    });
+  }
 }
+
+makeGrid(16);
