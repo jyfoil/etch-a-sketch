@@ -14,6 +14,18 @@ function makeGrid(numOfRows) {
   }
 }
 
+function sketchBlack() {
+  const rows = document.querySelectorAll(".row");
+  rows.forEach((row) => {
+    row.addEventListener("mouseover", () => {
+      row.style.backgroundColor = "#000";
+    });
+  });
+}
+
+const black = document.querySelector(".black");
+black.addEventListener("click", sketchBlack);
+
 makeGrid(16);
 
 function changeGrid() {
