@@ -18,7 +18,12 @@ makeGrid(16);
 
 function changeGrid() {
   let newSize = prompt("Please enter the number of squares per side (1-100)");
-  makeGrid(newSize);
+  if (newSize > 0 && newSize <= 100) {
+    makeGrid(newSize);
+  } else {
+    alert("Enter a number between 1-100");
+    makeGrid(16);
+  }
 }
 
 function resetGrid() {
