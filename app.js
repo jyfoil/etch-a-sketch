@@ -47,3 +47,17 @@ reset.addEventListener("click", () => {
     row.style.backgroundColor = "#fff";
   });
 });
+
+function getRandomColor() {
+  const rows = document.querySelectorAll(".row");
+  rows.forEach((row) => {
+    let color = Math.floor(Math.random() * 16777215).toString(16);
+    color = "#" + color;
+    row.addEventListener("mouseover", () => {
+      row.style.backgroundColor = color;
+    });
+  });
+}
+
+const randomizer = document.querySelector(".rgb");
+randomizer.addEventListener("click", getRandomColor);
