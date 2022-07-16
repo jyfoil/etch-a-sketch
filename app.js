@@ -9,7 +9,7 @@ function makeGrid(numOfRows) {
     grid.appendChild(rows);
 
     rows.addEventListener("mouseover", () => {
-      rows.style.backgroundColor = "black";
+      rows.style.backgroundColor = "#000000";
     });
   }
 }
@@ -38,4 +38,12 @@ const size = document.querySelector(".size");
 size.addEventListener("click", () => {
   resetGrid();
   changeGrid();
+});
+
+const reset = document.querySelector(".reset");
+reset.addEventListener("click", () => {
+  const rows = document.querySelectorAll(".row");
+  rows.forEach((row) => {
+    row.style.backgroundColor = "#fff";
+  });
 });
