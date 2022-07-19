@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-https://jyfoil.github.io/Etch-a-Sketch/
+https://jyfoil.github.io/etch-a-sketch/
 
 ## Project Description
 
