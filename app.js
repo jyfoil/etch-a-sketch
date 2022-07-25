@@ -1,3 +1,25 @@
+const randomColorBtn = document.querySelector(".rgb");
+const defaultColorBtn = document.querySelector(".black");
+const changeSizeBtn = document.querySelector(".size");
+const resetBtn = document.querySelector(".reset");
+
+randomColorBtn.addEventListener("click", getRandomColor);
+defaultColorBtn.addEventListener("click", getColorBlack);
+
+changeSizeBtn.addEventListener("click", () => {
+  resetGrid();
+  changeGrid();
+});
+
+resetBtn.addEventListener("click", () => {
+  const rows = document.querySelectorAll(".row");
+  rows.forEach((row) => {
+    row.style.backgroundColor = "#fff";
+  });
+});
+
+makeGrid(16);
+
 function makeGrid(numOfRows) {
   const grid = document.querySelector(".grid");
   const total = numOfRows * numOfRows;
@@ -14,7 +36,7 @@ function makeGrid(numOfRows) {
   }
 }
 
-function sketchBlack() {
+function getColorBlack() {
   const rows = document.querySelectorAll(".row");
   rows.forEach((row) => {
     row.addEventListener("mouseover", () => {
@@ -22,11 +44,6 @@ function sketchBlack() {
     });
   });
 }
-
-const black = document.querySelector(".black");
-black.addEventListener("click", sketchBlack);
-
-makeGrid(16);
 
 function changeGrid() {
   let newSize = prompt("Please enter the number of squares per side (1-100)");
@@ -46,20 +63,6 @@ function resetGrid() {
   });
 }
 
-const size = document.querySelector(".size");
-size.addEventListener("click", () => {
-  resetGrid();
-  changeGrid();
-});
-
-const reset = document.querySelector(".reset");
-reset.addEventListener("click", () => {
-  const rows = document.querySelectorAll(".row");
-  rows.forEach((row) => {
-    row.style.backgroundColor = "#fff";
-  });
-});
-
 function getRandomColor() {
   const rows = document.querySelectorAll(".row");
   rows.forEach((row) => {
@@ -70,6 +73,3 @@ function getRandomColor() {
     });
   });
 }
-
-const randomizer = document.querySelector(".rgb");
-randomizer.addEventListener("click", getRandomColor);
